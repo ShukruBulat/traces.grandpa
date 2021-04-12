@@ -1,0 +1,142 @@
+  .container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr auto auto auto;
+    grid-gap: 30px;
+    padding: 10px;
+    grid-template-areas:
+      "title"
+      "photo"
+      "dates"
+      "story"
+      "footer";
+  }
+  .title {
+    background: LightGray;
+    color: #444;
+    font-size: 60px;
+    text-align: center;
+    grid-area: title;
+    padding: 20px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 5px;
+  }
+
+  .photo {
+    background: LightSalmon;
+    grid-area: photo;
+    text-align: center;
+    max-width: 100%; 
+    padding: 50px;
+    margin: 0px 20px 10px 10px;
+    border-radius: 5px;
+    }
+  #fig-cap {margin-top: 35px; 
+            font-size: 1.1rem;
+            font-weight: 640;}
+
+  img {transition: transform 400ms ease; border-radius: 5px}
+  
+  img:hover {
+  transform: scale(1.2); 
+  transition: transform 400ms ease;
+  }  
+
+ .dates { 
+    color: black;
+    grid-area: dates;
+    margin-bottom: -20px;
+    display: grid;
+    grid-gap: 10px;
+    text-align: left;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 10px;
+    width: auto;
+    grid-template-areas:
+    "birth education mariage child-birth"  
+    }
+  .birth {grid-area: birth; margin-right: 7px; background: #999; padding: 10px; border-radius: 5px; } 
+  .education {grid-area: education; margin-right: 7px; background: #999; padding: 10px; border-radius: 5px;} 
+  .mariage {grid-area: mariage; margin-right: 7px; background: #999; padding: 10px;  border-radius: 5px;} 
+  .child-birth {grid-area: child-birth; margin-right: 7px; background: #999; padding: 10px; border-radius: 5px;}
+   
+  .story {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-right: 25px;
+    text-align: justify;
+    background: LightGray;
+    grid-area: story;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    padding: 10px;
+    grid-template-areas:
+      "a1" 
+      "a2"
+      "a3"
+      "a4"
+      "a5";
+    }
+
+  .a1 {grid-area: a1;}
+  .a2 {grid-area: a2;}
+  .a3 {grid-area: a3;}
+  .a4 {grid-area: a4;}
+  .a5 {grid-area: a5;}
+
+  .footer {
+    background: #999;
+    color: white;
+    font-size: 1.2rem  ;
+    text-align: center;
+    line-height: 20px;
+    grid-area: footer;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0px 20px 0px 10px;
+  }
+
+h4 {margin-bottom: -5px;
+    margin-top: 5px;
+    font-weight: 640;}
+
+#link {display: inline-block; 
+  color: black;
+  background: lightgreen;
+  border-radius: 3px;
+  text-decoration: none; 
+  font-size: 1.2rem; 
+  padding: 5px;
+  transition: transform 500ms ease;}
+  
+#link:hover {
+  transform: scale(1.4); 
+  transition: transform 500ms ease;
+  }  
+
+@media (max-width: 550px) {
+  #title {font-size: 30px;}
+  #img-cap {max-width: 100%; }
+  .dates { 
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "birth"
+    "education"
+    "mariage"
+    "child-birth"  
+    }
+    .container, .footer {font-size: 1rem;
+                font-weight: 499;}
+    #fig-cap {font-size: 1rem;}
+    
+  }
+ 
